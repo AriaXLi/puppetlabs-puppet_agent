@@ -34,8 +34,9 @@ describe 'install task' do
 
   def log_output_errors(result)
     return if result['status'] == 'success'
-    out = result.dig('value', '_output') || 'Unknown result output'
-    puts logger.info(out)
+    #out = result.dig('value', '_output') || 'Unknown result output'
+    puts logger.info(result)
+    #puts logger.info(out)
   end
 
   # This method contains a list of platforms that are only available in nightly builds of puppet-agent. Once a regular
